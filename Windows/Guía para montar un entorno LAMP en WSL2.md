@@ -1,4 +1,4 @@
-# Montar un entorno **LAMP** en **WSL2** (Ubuntu/Debian) para desarrollo local con:
+# Montar un entorno **LAMP** en **WSL2** (Ubuntu/Debian) para desarrollo local con
 
 - **Linux** (WSL2)
 - **Apache 2.4+ (Servidor Local)**
@@ -13,7 +13,7 @@
 
 ## Requisitos
 
-- Windows 10/11 con [**WSL**](Gu%C3%ADa%20para%20Instalar%20WSL2.md)
+- Windows 10/11 con [**WSL**](Gu%C3%ADa%20para%20instalar%20WSL2.md)
 - Una distro como **Ubuntu 22.04/24.04** (recomendado)
 - Terminal Windows / Windows Terminal
 
@@ -154,13 +154,13 @@ Este comando nos abrirá un editor en la terminal, el cual manejaremos utilizand
 
 Como primera combinación, utilizaremos:
 
-```
+```bash
 Ctrl + W
 ```
 
 Esta combinación nos permitirá buscar texto de una forma más rápida dentro del archivo. En este caso, la palabra que buscaremos será:
 
-```
+```bash
 display_errors
 ```
 
@@ -170,13 +170,13 @@ Al presionar **Enter**, nos mostrará una coincidencia, pero esta no será la op
 
 El editor mantiene en memoria nuestra última búsqueda, así que no es necesario volver a escribir la palabra. Simplemente presionamos nuevamente:
 
-```
+```bash
 Ctrl + W
 ```
 
 y después **Enter** para continuar con la búsqueda hasta encontrar el texto que necesitamos. utilizaremos las **teclas de flecha** para desplazarnos hacia la derecha hasta llegar al valor `Off`. Después, eliminaremos `Off` y lo cambiaremos por `On`, de manera que quede:
 
-```
+```bash
 display_errors = On
 ```
 
@@ -184,7 +184,7 @@ display_errors = On
 
 Cuando terminemos, guardaremos los cambios utilizando la combinación de teclas:
 
-```
+```bash
 Ctrl + O
 ```
 
@@ -192,7 +192,7 @@ Después, presionamos **Enter** para confirmar y guardar los cambios.
 
 Para salir del editor, presionamos:
 
-```
+```bash
 Ctrl + X
 ```
 
@@ -200,7 +200,7 @@ Ctrl + X
 
 Para comenzar a trabajar con nuestros proyectos, debemos ubicarnos en la carpeta donde Apache almacena los archivos que serán servidos por el servidor web:
 
-```
+```bash
 cd /var/www/html
 ```
 
@@ -208,7 +208,7 @@ Esta es la carpeta que Apache utiliza por defecto como **directorio raíz** para
 
 Al ingresar a esta carpeta, encontraremos por defecto un archivo llamado `index.html`. Este archivo pertenece a la página de bienvenida de Apache que se muestra cuando accedemos en navegador a:
 
-```
+```txt
 <http://localhost>
 ```
 
@@ -216,19 +216,19 @@ Apache busca automáticamente un archivo de inicio, como `index.html` o `index.p
 
 Podemos eliminar este archivo sin afectar el funcionamiento del servicio de Apache:
 
-```
+```bash
 sudo rm index.html
 ```
 
 Ahora crearemos nuestro propio archivo de inicio utilizando PHP:
 
-```
+```bash
 sudo nano index.php
 ```
 
 Dentro del archivo escribiremos:
 
-```
+```php
 <?php
 phpinfo();
 ?>
@@ -238,7 +238,7 @@ La función `phpinfo()` nos permitirá visualizar información detallada sobre l
 
 Una vez guardado el archivo, podemos abrir nuevamente:
 
-```
+```txt
 <http://localhost>
 ```
 
@@ -256,37 +256,37 @@ Por esta razón, cuando trabajamos con múltiples versiones debemos establecer c
 
 Para consultar las versiones de PHP instaladas podemos utilizar:
 
-```
+```bash
 ls /etc/php/
 ```
 
 Y para comprobar qué versión está utilizando actualmente la terminal:
 
-```
+```bash
 php -v
 ```
 
 En el caso de Apache, también debemos administrar el módulo de PHP que se encuentra habilitado. Por ejemplo, si queremos que Apache utilice PHP 7.5, debemos habilitar su módulo:
 
-```
+```bash
 sudo a2enmod php7.5
 ```
 
 y deshabilitar el de otra versión si estuviera activo:
 
-```
+```bash
 sudo a2dismod php8.4
 ```
 
 Finalmente, reiniciamos Apache para aplicar los cambios:
 
-```
+```bash
 sudo service apache2 restart
 ```
 
 Es importante tener en cuenta que **cada versión de PHP cuenta con su propio archivo de configuración `php.ini`**. Por lo tanto, si cambiamos la versión que utiliza Apache, también debemos revisar y configurar el `php.ini` correspondiente a esa versión. Por ejemplo, para PHP 8.4:
 
-```
+```bash
 sudo nano /etc/php/7.5/apache2/php.ini
 ```
 

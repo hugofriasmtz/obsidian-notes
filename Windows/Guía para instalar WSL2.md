@@ -1,7 +1,8 @@
-## ¿Qué es WSL2?
+# ¿Qué es WSL2?
 
 **WSL2 (Windows Subsystem for Linux 2)** es una característica de Windows que te permite ejecutar un entorno Linux dentro de Windows, usando una **máquina virtual ligera** (un kernel real de Linux).
-### ¿Para qué sirve?
+
+## ¿Para qué sirve?
 
 - Usar herramientas de Linux (bash, ssh, git, python, etc.) sin instalar Linux en dual-boot.
 - Desarrollo web/backend y automatización con un entorno tipo Linux.
@@ -18,6 +19,7 @@
 
 ## Instalación por **línea de comando** (Windows 10 y Windows 11)
 
+>[!TIP]
 > Recomendado si quieres hacerlo rápido y controlado.
 
 ### Requisitos (Windows 10)
@@ -36,6 +38,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 Reinicia Windows.
 
+>[!NOTE]
 > (Opcional) Hyper-V (si tu edición lo soporta). No siempre es obligatorio para WSL2, pero puede ayudar en algunos escenarios:
 
 ```powershell
@@ -88,6 +91,7 @@ wsl --set-version <NombreDeTuDistro> 2
 
 ## Instalación con **Microsoft Store** (más “guiada”)
 
+>[!TIP]
 > Ideal si prefieres instalar la distro como una app y gestionarla visualmente.
 
 ### 1) Activar WSL2 (Windows 10)
@@ -124,25 +128,25 @@ wsl -l -v
 ## Comandos útiles (para el día a día)
 
 - Listar distros instaladas:
-    
+
     ```powershell
     wsl -l -v
     ```
-    
+
 - Apagar WSL (por ejemplo, si se “queda colgado”):
-    
+
     ```powershell
     wsl --shutdown
     ```
-    
+
 - Actualizar WSL:
-    
+
     ```powershell
     wsl --update
     ```
-    
+
 - Ver tu versión de WSL:
-    
+
     ```powershell
     wsl --version
     ```
