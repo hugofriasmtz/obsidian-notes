@@ -6,3 +6,5 @@
 6. spotify
 7. visual-studio-code-bin
 8. yay
+
+[*Pacman*](<Instalaciones atravez de Pacman.md>)
