@@ -17,3 +17,4 @@ Los capítulos están organizados por tarea para facilitar la consulta y el apre
 4. [Contenido y comparación](<004.Contenido y Comparacion.md>) - Leer y comparar archivos.
 5. [Permisos](<005.Permisos.md>) - Gestionar accesos y propietarios.
 6. [Gestión de usuarios](<006.Gestion de Usuarios.md>) - Administrar usuarios y grupos.
+7. [Reconocimiento del Sistema](<007.Reconocimiento del Sistema.md>) - Supervisar y controlar procesos.
