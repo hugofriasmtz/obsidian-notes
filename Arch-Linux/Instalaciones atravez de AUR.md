@@ -1,10 +1,8 @@
-1. Brave-bin
-2. brave-bin
-3. localsend-bin
-4. pokemon-colorscripts-git
-5. spotatui-bin
-6. spotify
-7. visual-studio-code-bin
-8. yay
+1. brave-bin
+2. localsend-bin
+3. pokemon-colorscripts-git
+4. spotify
+5. visual-studio-code-bin
+6. yay
 
 [*Pacman*](<Instalaciones atravez de Pacman.md>)
