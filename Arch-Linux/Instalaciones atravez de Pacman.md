@@ -1,3 +1,5 @@
+# Instalaciones a través de Pacman
+
 1. Btop
 2. Ghostty
 3. obs
