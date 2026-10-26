@@ -26,4 +26,3 @@ Python no es una lengua joven. Es **maduro y digno de confianza**. No es una mar
 3. Es **fácil de utilizar** para escribir software nuevo - a menudo es posible escribir código más rápido cuando se emplea Python.
 4. Es **fácil de entender** - a menudo, también es más fácil entender el código de otra persona más rápido si está escrito en Python.
 5. Es **fácil de obtener, instalar y desplegar** - Python es gratuito, abierto y multiplataforma; no todos los lenguajes pueden presumir de eso.
-
