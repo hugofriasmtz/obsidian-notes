@@ -6,3 +6,7 @@ Empezar con **retos** dedicados para consumir una **API** ya sea de South Park o
 2. Como consumirla
 3. Que son las cabeceras
 4. Estados en los Servidores
+
+## Terminar el curso
+
+Lo que resta del mes estaré tcompletando mi curso de Js 
