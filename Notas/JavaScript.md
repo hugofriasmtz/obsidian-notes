@@ -9,4 +9,4 @@ Empezar con **retos** dedicados para consumir una **API** ya sea de South Park o
 
 ## Terminar el curso
 
-Lo que resta del mes estaré tcompletando mi curso de Js 
+Lo que resta del mes estaré completando mi curso de Js
